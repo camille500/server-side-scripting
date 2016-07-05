@@ -1,0 +1,61 @@
+<%- include('../partials/head.ejs') %>
+
+<h1>Overzicht van alle gebruikers</h1>
+
+<% if(data.length) { %>
+    
+              <div class="row">
+               
+                <div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-0">
+                  <div class="panel panel-default">
+                   
+                    <!-- Progress table -->
+                    
+                    <div class="table-responsive">
+                      <table class="table v-middle">
+                        <thead>
+                          <tr>
+                            <th>ID</th>
+                            <th>Gebruikersnaam</th>
+                            <th>E-mailadres</th>
+                            <th>Woonplaats</th>
+                            <th class="text-right">Opties</th>
+                          </tr>
+                        </thead>
+                        
+                        <tbody id="responsive-table-body">
+                         
+                          <% for(var i = 0;i < data.length; i++) { %>
+                         
+                          <tr>
+                            <td><span class="label label-default"><%=data[i].id%></span></td>
+                            <td><%=data[i].username%></td>
+                            <td><%=data[i].mail%></td>
+                            <td><%=data[i].hometown%></td>
+                            <td class="text-right">
+                              <a data-original-title="Bewerk" href="/users/change_user/<%=data[i].id%>" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-pencil"></i></a>
+                              <a href="/users/delete_user/<%=data[i].id%>" class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="top" title="Verwijder"><i class="fa fa-times"></i></a>
+                            </td>
+                          </tr>
+                          
+                         <% } %>
+      
+                        </tbody>
+                        
+                      </table>
+                    </div>
+
+                </div>
+              </div>
+              
+    <% } else { %>
+    
+    <p>Geen gebruikers gevonden</p>
+    
+    <% } %>
+
+    
+            
+
+
+<%- include('../partials/foot.ejs') %>

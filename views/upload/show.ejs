@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html class="st-layout ls-top-navbar ls-bottom-footer hide-sidebar sidebar-r2" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>ThemeKit</title>
+
+  <link href="../../assets/css/vendor/all.css" rel="stylesheet">
+  <link href="../../assets/css/app/app.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Wrapper required for sidebar transitions -->
+  <div class="st-container">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-main navbar-primary navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="#sidebar-chat" data-toggle="sidebar-menu" class="toggle pull-right visible-xs"><i class="fa fa-comments"></i></a>
+          <a class="navbar-brand" href="/">VectorShare</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="main-nav">
+          <ul class="nav navbar-nav">
+            <li><a href="/users">Gebruikers</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mijn account<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="secret/login">Inloggen</a></li>
+                <li><a href="secret/register">Registreren</a></li>
+                <li><a href="/secret">Profiel</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav  navbar-right ">
+            
+            <!-- User -->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle user" data-toggle="dropdown">
+                <img src="../../assets/images/people/110/guy-5.jpg" alt="Bill" class="img-circle" width="40" /> Bill <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="user-private-profile.html">Profile</a></li>
+                <li><a href="user-private-messages.html">Messages</a></li>
+                <li><a href="login.html">Logout</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+    </div>
+
+    <!-- sidebar effects OUTSIDE of st-pusher: -->
+    <!-- st-effect-1, st-effect-2, st-effect-4, st-effect-5, st-effect-9, st-effect-10, st-effect-11, st-effect-12, st-effect-13 -->
+
+    <!-- content push wrapper -->
+    <div class="st-pusher" id="content">
+
+      <!-- sidebar effects INSIDE of st-pusher: -->
+      <!-- st-effect-3, st-effect-6, st-effect-7, st-effect-8, st-effect-14 -->
+
+      <!-- this is the wrapper for the content -->
+      <div class="st-content">
+
+        <!-- extra div for emulating position:fixed of the menu -->
+        <div class="st-content-inner">
+        
+           <div class="container">
+               
+                <div class="timeline-block" id="photo_show">
+                  <div class="panel panel-default">
+
+                    <div class="panel-heading">
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="">
+                            <img src="../../assets/images/people/50/guy-6.jpg" class="media-object">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <a href="#" class="pull-right text-muted"><i class="icon-reply-all-fill fa fa-2x "></i></a>
+
+                          <a href="/upload/show/<%=results.file_id%>"><%=results.filename%></a>
+
+                          <span>door <%=results.username%> op <%=results.date%></span>
+                        </div>
+                      </div>
+
+                    <img src="http://192.168.56.101:3000/uploaddir/<%=results.filename%>" class="img-responsive" id="photo_upload">
+                    
+                  </div>
+                <ul class="comments">
+                     
+                   <% for(var i=0;i<result.length;i++) { %>
+                     
+                      <li clas="media">
+                        <div class="media-left">
+                          <a href="">
+                            <img src="../../assets/images/people/50/woman-5.jpg" class="media-object">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <div style="display: none;" class="pull-right dropdown" data-show-hover="li">
+                            <a aria-expanded="false" href="#" data-toggle="dropdown" class="toggle-button">
+                              <i class="fa fa-pencil"></i>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                              <li><a href="#">Edit</a></li>
+                              <li><a href="#">Delete</a></li>
+                            </ul>
+                          </div>
+                          <a href="" class="comment-author"><%=result[i].upload_by%></a>
+                          <span><%=result[i].comment%></span>
+                          <div class="comment-date"><%=result[i].date%></div>
+                        </div>
+                      </li>
+                      
+                     <% } %>
+
+                      <li class="comment-form">
+                       
+                       <form method="post">
+                       
+                        <div class="input-group">
+                          
+                          <input class="form-control" type="text" name="name" id="name" placeholder="Voer uw naam in">
+                          <input class="form-control" type="text" name="comment_txt" id="comment_txt" placeholder="Uw reactie">
+
+                          <input type="submit" value="PLAATS REACTIE" id="send_comment">
+                        
+                        </form>
+
+
+                        </div>
+                      </li>
+                    </ul>
+                </div>
+               </div>
+            </div>
+             
+<%- include('../partials/foot.ejs') %>

@@ -1,0 +1,38 @@
+<%- include('../partials/head.ejs') %>
+
+<h1>Nieuwe gebruiker aanmaken</h1>
+
+<form method="post" class="form_users_new">
+   
+        <h1>Nieuwe gebruiker aanmaken
+        <span class="head_span">Vul het formulier in om een nieuwe gebruiker te registreren</span>
+        </h1>
+    
+    <label>
+        <span>Naam:</span>
+        <input id="username" type="text" name="username" placeholder="Gebruikersnaam" />
+    </label>
+    
+    <label>
+        <span>Wachtwoord:</span>
+        <input id="password" type="password" name="password" />
+    </label>
+    
+    <label>
+        <span>Mailadres:</span>
+        <input id="hometown" type="email" name="hometown" placeholder="Woonplaats" />
+    </label>
+    
+    <label>
+        <span>Woonplaats:</span>
+        <input id="hometown" type="text" name="hometown" placeholder="Woonplaats" />
+    </label>
+       
+     <label>
+        <span>&nbsp;</span> 
+        <input type="button" class="button" value="Maak account" /> 
+    </label>   
+     
+</form>
+
+<%- include('../partials/foot.ejs') %>

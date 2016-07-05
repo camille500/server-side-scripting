@@ -1,0 +1,36 @@
+<%- include('../partials/head.ejs') %>
+
+
+<div class="container" id="login-block">
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-md-offset-3">
+                    <div class="account-wall">
+                        <form class="form-signin" method="post" enctype="multipart/form-data" role="form">
+                            <h3><strong>Upload</strong> een Vector</h3>
+                            <div class="append-icon">
+                                <input type="" name="filename" id="filename" class="form-control form-white file" placeholder="Bestandsnaam" required autofocus>
+                                <i class="icon-user"></i>
+                            </div>
+                            <label for="file-field">
+                              Bestand: <input type="file" name="file" id="file-field" value="" />
+                            </label>
+                            <button type="submit" class="btn btn-lg btn-dark m-t-20" data-style="expand-left">Uploaden</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+         
+         
+  <!-- 
+   
+    <form method="post" enctype="multipart/form-data">
+          <label for="file-field">
+              Bestand: <input type="file" name="file" id="file-field" value="" />
+          </label>
+        <input type="submit" id="submit" value="Bestand uploaden" />
+    </form>
+ -->
+ 
+<%- include('../partials/foot.ejs') %>
+
+

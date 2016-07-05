@@ -1,0 +1,32 @@
+<%- include('../partials/head.ejs') %>
+
+    <% for(var i=0;i<data.length;i++) { %>
+
+                <div class="timeline-block" id="photo_disp">
+                  <div class="panel panel-default">
+
+                    <div class="panel-heading">
+                      <div class="media">
+                        <div class="media-left">
+                          <p><%=data[i].file_id%></p>
+                        </div>
+                        <div class="media-body">
+                          <a href="#" class="pull-right text-muted"><i class="icon-reply-all-fill fa fa-2x "></i></a>
+
+                          <a href="/upload/show/<%=data[i].file_id%>"><%=data[i].filename%></a>
+
+                          <span>door <%=data[i].username%> op <%=data[i].date%></span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <img src="http://192.168.56.101:3000/uploaddir/<%=data[i].filename%>" class="img-responsive" id="photo_upload">
+
+                  </div>
+
+                </div>
+
+                <% } %>
+
+
+<%- include('../partials/foot.ejs') %>

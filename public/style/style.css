@@ -1,0 +1,423 @@
+@import "compass/css3";
+
+body {
+    padding: 0 2em;
+    font-family: 'Open Sans', sans-serif;
+    background:url(http://thekitemap.com/images/feedback-img.jpg) no-repeat;
+    background-size: cover;
+    height:100%;
+}
+
+#ongeldig {
+    font-weight: 700;
+    color: red;
+}
+
+#online {
+    font-weight: 700;
+    color: green;
+}
+
+td > a {
+    text-decoration: none;
+    color: #3d50a3;
+    font-weight: 500;
+}
+
+/* USERLIST - Lijstweergave gebruikers */
+
+
+.userlist {
+  margin: 1em 0;
+  width: 100%;
+  overflow: hidden;
+  background: #FFF;
+  color: #024457;
+}
+.userlist tr {
+  border: 1px solid #D9E4E6;
+}
+.userlist tr:nth-child(odd) {
+  background-color: white;
+}
+.userlist tr:nth-child(even) {
+  background-color: #E8E8E8;
+}
+.userlist th {
+  display: none;
+  border: 1px solid #FFF;
+  background-color: #CA4545;
+  color: #FFF;
+  padding: 1em;
+}
+.userlist th:first-child {
+  display: table-cell;
+  text-align: center;
+}
+.userlist th:last-child {
+  display: table-cell;
+  text-align: center;
+}
+.userlist th:nth-child(2) {
+  display: table-cell;
+}
+.userlist th:nth-child(2) span {
+  display: none;
+}
+.userlist th:nth-child(2):after {
+  content: attr(data-th);
+}
+@media (min-width: 480px) {
+  .userlist th:nth-child(2) span {
+    display: block;
+  }
+  .userlist th:nth-child(2):after {
+    display: none;
+  }
+}
+.userlist td {
+  display: block;
+  word-wrap: break-word;
+  max-width: 7em;
+}
+.userlist td:first-child {
+  display: table-cell;
+  text-align: center;
+  border-right: 1px solid #D9E4E6;
+}
+
+.userlist td:last-child {
+  display: table-cell;
+  text-align: center;
+  border-right: 1px solid #D9E4E6;
+}
+
+@media (min-width: 480px) {
+  .userlist td {
+    border: 1px #EAE8E8 solid;
+  }
+}
+.userlist th, .userlist td {
+  text-align: left;
+  margin: .5em 1em;
+}
+@media (min-width: 480px) {
+  .userlist th, .userlist td {
+    display: table-cell;
+    padding: 1em;
+  }
+}
+
+h1 {
+  font-family: Verdana;
+  font-weight: normal;
+  color: #ffffff;
+  text-align: center;
+}
+
+h1 span {
+  color: #167F92;
+}
+
+/* REGISTRATIE FORMULIER */
+
+#feedback-page {
+	text-align:center;
+}
+
+#form-main{
+	width:100%;
+	float:left;
+	padding-top:0px;
+}
+
+#form-div {
+background-color: rgba(0, 0, 0, 0.3);
+padding: 35px 35px 50px;
+width: 450px;
+float: left;
+left: 50%;
+position: absolute;
+margin-top: 30px;
+margin-left: -260px;
+border: 2px rgba(213, 212, 206, 0.2) solid;
+}
+
+.feedback-input {
+	color:#3c3c3c;
+	font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+	font-size: 18px;
+	border-radius: 0;
+	line-height: 22px;
+	background-color: #fbfbfb;
+	padding: 13px 13px 13px 54px;
+	margin-bottom: 10px;
+	width:100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+  border: 3px solid rgba(0,0,0,0);
+}
+
+.feedback-input:focus{
+	background: #fff;
+	box-shadow: 0;
+	border: 3px solid #3498db;
+	color: #3498db;
+	outline: none;
+  padding: 13px 13px 13px 54px;
+}
+
+.focused{
+	color:#30aed6;
+	border:#30aed6 solid 3px;
+}
+
+/* Icons ---------------------------------- */
+
+#username{
+	background-image: url(http://fishionaire.com/icon/114-user.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#username:focus{
+	background-image: url(http://fishionaire.com/icon/114-user.svg);
+	background-size: 30px 30px;
+	background-position: 8px 5px;
+  background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#password {
+	background-image: url(http://fishionaire.com/icon/142-key.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#password_disable {
+	background-image: url(http://fishionaire.com/icon/142-key.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+    background-color: rgb(193, 193, 193);
+}
+
+#password:focus {
+	background-image: url(http://fishionaire.com/icon/142-key.svg);
+	background-size: 30px 30px;
+	background-position: 8px 5px;
+    background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#hometown {
+	background-image: url(http://fishionaire.com/icon/001-home.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#hometown:focus {
+	background-image: url(http://fishionaire.com/icon/001-home.svg);
+	background-size: 30px 30px;
+	background-position: 8px 5px;
+  background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#email{
+	background-image: url(http://fishionaire.com/icon/070-envelop.svg);
+	background-size: 30px 30px;
+	background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+#email:focus{
+	background-image: url(http://fishionaire.com/icon/070-envelop.svg);
+	background-size: 30px 30px;
+  background-position: 11px 8px;
+	background-repeat: no-repeat;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    line-height: 150%;
+    resize:vertical;
+}
+
+input:hover, textarea:hover,
+input:focus, textarea:focus {
+	background-color:white;
+}
+
+#button-blue{
+    font-family: "Open Sans",sans-serif;
+    float: right;
+    width: 100%;
+    border: 1px solid #ffffff;
+    cursor: pointer;
+    background-color: #CA4545;
+    color: #FFF;
+    font-size: 16px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+#button-blue:hover{
+	background-color: #B93838;
+	color: #FFF;
+    font-weight: 600;
+    transition: 1.2s;
+}
+	
+
+.submit:hover .ease{
+  width:100%;
+  background-color:white;
+}
+
+@media only screen and (max-width: 580px) {
+	#form-div{
+		left: 3%;
+		margin-right: 3%;
+		width: 88%;
+		margin-left: 0;
+		padding-left: 3%;
+		padding-right: 3%;
+	}
+}
+
+#cssmenu {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  font-size: 10px;
+  line-height: 15px;
+  text-transform: uppercase;
+  text-align: left;
+}
+#cssmenu > ul {
+    list-style-type: none;
+    padding: 5px;
+    margin: 0;
+    background: #FFFFFF;
+    border: 1px solid #ece6e8;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+#cssmenu > ul li#responsive-tab {
+  display: none;
+  /* Hide for large screens */
+
+}
+#cssmenu > ul li {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+#cssmenu > ul li.right {
+  float: right;
+}
+#cssmenu > ul li.has-sub {
+  position: relative;
+}
+#cssmenu > ul li.has-sub:hover ul {
+  display: block;
+}
+#cssmenu > ul li.has-sub ul {
+  display: none;
+  width: 250px;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background: #ffffff;
+  border: 1px solid #ece6e8;
+  border-bottom: 3px solid #d9ced2;
+  border-top: 0 none;
+}
+#cssmenu > ul li.has-sub ul li {
+  display: block;
+}
+#cssmenu > ul li.has-sub > a {
+  background-image: url('images/caret.png');
+  background-repeat: no-repeat;
+  background-position: 90% -95%;
+}
+#cssmenu > ul li.has-sub > a.active,
+#cssmenu > ul li.has-sub > a:hover {
+  background: #d80041 url('images/caret.png') no-repeat;
+  background-position: 90% 195%;
+}
+#cssmenu > ul li a {
+  display: block;
+  padding: 12px 24px 11px 24px;
+  text-decoration: none;
+  color: #747474;
+  text-shadow: 0px 1px 0px #fff;
+}
+#cssmenu > ul li a.active,
+#cssmenu > ul li a:hover {
+  background: #d80041;
+  color: #fff;
+  text-shadow: 0px 1px 0px #000;
+}
+@media (max-width: 600px) {
+  #cssmenu > ul {
+    width: 100%;
+  }
+  #cssmenu > ul li#responsive-tab {
+    display: block;
+  }
+  #cssmenu > ul li#responsive-tab a {
+    background: url('images/menu.png') no-repeat;
+    background-position: 95% -35%;
+  }
+  #cssmenu > ul li#responsive-tab a:hover {
+    background-color: #d80041;
+    background-position: 95% 135%;
+  }
+  #cssmenu > ul li {
+    display: none;
+  }
+  #cssmenu > ul li.right {
+    float: none;
+  }
+  #cssmenu > ul li.has-sub {
+    position: relative;
+  }
+  #cssmenu > ul li.has-sub ul {
+    display: block;
+    position: static;
+    width: 100%;
+    background: #ffffff;
+    border: 0 none;
+  }
+  #cssmenu > ul li.has-sub ul li {
+    display: block !important;
+  }
+  #cssmenu > ul li.has-sub ul li a span {
+    display: block;
+    padding-left: 24px;
+  }
+  #cssmenu > ul li.has-sub > a {
+    background-image: none;
+  }
+}
+/* Make sure they show even if hidden in mobile view by JS */
+@media (min-width: 600px) {
+  #cssmenu > ul > li.collapsed {
+    display: inline-block !important;
+    *display: inline;
+    zoom: 1;
+  }
+  #cssmenu > ul ul li.collapsed {
+    display: block !important;
+  }
+}
